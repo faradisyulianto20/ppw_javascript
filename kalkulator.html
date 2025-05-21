@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kalkulator Sederhana</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <div class="border border-primary p-5 m-auto">
+        <h2>Kalkulator Sederhana</h2>
+
+            <button class="btn btn-primary m-2" onclick="bilangan1()">Bilangan pertama</button>
+            <button class="btn btn-primary m-2" onclick="bilangan2()">Bilangan kedua</button>
+            <div class="w-auto  m-2">
+                <button class="btn btn-primary" onclick="tambah()">+</button>
+                <button class="btn btn-primary" onclick="kurang()">-</button>
+                <button class="btn btn-primary" onclick="kali()">x</button>
+                <button class="btn btn-primary" onclick="bagi()">:</button>
+            </div>
+
+            <p class="w-auto ">Bilangan 1: <span id="bil1"></span></p>
+            <p class="w-auto ">Bilangan 2: <span id="bil2"></span></p>
+            <p class="w-auto ">Hasil: <span id="hasil"></span></p>
+    </div>
+
+    <script>
+        var bil1 = null
+        var bil2 = null
+        var hasil
+        function bilangan1() {
+            var bil = prompt("Masukkan bilangan 1!")
+            bil1 = bil
+            document.getElementById("bil1").innerHTML = 
+ bil1;
+        }
+        function bilangan2() {
+            var bil = prompt("Masukkan bilangan 2!")
+            bil2 = bil
+            document.getElementById("bil2").innerHTML = 
+ bil2;
+        }
+        function tambah() {
+            if (bil1 == null || bil2 == null) {
+                alert("Masukkan bilangan 1 atau 2 terlebih dahulu!")
+            } else {
+                hasil = parseInt(bil1) + parseInt(bil2)
+                document.getElementById("hasil").innerHTML = 
+ hasil;
+            }
+        }
+        function kurang() {
+            if (bil1 == null || bil2 == null) {
+                alert("Masukkan bilangan 1 atau 2 terlebih dahulu!")
+            } else {
+                hasil = bil1 - bil2
+                document.getElementById("hasil").innerHTML = 
+ hasil;
+            }
+        }
+        function kali() {
+            if (bil1 == null || bil2 == null) {
+                alert("Masukkan bilangan 1 atau 2 terlebih dahulu!")
+            } else {
+                hasil = bil1 * bil2
+                document.getElementById("hasil").innerHTML = 
+ hasil;
+            }
+        }
+        function bagi() {
+            if (bil1 == null || bil2 == null) {
+                alert("Masukkan bilangan 1 atau 2 terlebih dahulu!")
+            } else {
+                hasil = bil1 / bil2
+                document.getElementById("hasil").innerHTML = 
+ hasil;
+            }
+        }
+    </script>
+</body>
+</html>

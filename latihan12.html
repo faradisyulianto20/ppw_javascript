@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Latihan 1 JS2</title>
+    </head>
+    <body>
+        <h2>Perbandingan Dua Bilangan</h2>
+
+        <script>
+            let bil1 = parseFloat(prompt("Masukkan bilangan ke-1:"));
+            let bil2 = parseFloat(prompt("Masukkan bilangan ke-2:"));
+            let hasil = "";
+
+            if (bil1 > bil2) {
+                hasil = "BILANGAN KE-1 LEBIH BESAR DARI BILANGAN KE-2";
+            } else if (bil1 < bil2) {
+                hasil = "BILANGAN KE-2 LEBIH BESAR DARI BILANGAN KE-1";
+            } else {
+                hasil = "KEDUA BILANGAN SAMA BESAR";
+            }
+
+            document.write(`<p>${hasil}</p>`);
+        </script>
+    </body>
+</html>
